@@ -1,0 +1,106 @@
+spring.application.name=APIGateway
+
+server:
+	port : 9999
+	
+spring:
+	application:
+		name: API-GATEWAY	
+		
+		main:
+    web-application-type: reactive
+    
+  	cloud:
+    config:
+      enabled: false
+   	 gateway:
+      	globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "http://localhost:3000"
+            allowedMethods: "GET,POST,PUT,DELETE"
+            allowedHeaders: "*"
+            allowCredentials: true
+        
+      routes[0]:        
+        id: customerregistration
+        uri: http://localhost:9006/api/v1/users/customerRegister/**
+        predicates[0]: Path=/api/v1/users/customerRegister/**
+        
+      routes[1]:        
+        id: customerregistration
+        uri: http://localhost:9006/api/v1/users/customerlogin/**
+        predicates[0]: Path=/api/v1/users/customerlogin/**
+        
+      routes[2]:        
+        id: customerregistration
+        uri: http://localhost:9006/api/v1/{emailId}/**
+        predicates[0]: Path=/api/v1/{emailId}/**
+        
+      routes[3]:        
+        id: customerregistration
+        uri: http://localhost:9006/api/v1/customer/update/{emailId}/**
+        predicates[0]: Path=/api/v1/customer/update/{emailId}/**
+        
+       routes[4]:        
+        id: ownerregistration
+        uri: http://localhost:9005/api/v1/users/ownerregister/**
+        predicates[0]: Path=/api/v1/users/ownerregister/**
+      
+ 	   routes[5]:        
+        id: ownerregistration
+        uri: http://localhost:9005/api/v1/users/ownerlogin/**
+        predicates[0]: Path=/api/v1/users/ownerlogin/**
+        
+       routes[6]:        
+        id: bookingdetails
+        uri: http://localhost:9001/api/v1/bookings/save/**
+        predicates[0]: Path=/api/v1/bookings/save/**
+     
+        
+       routes[7]:        
+        id: bookingdetails
+        uri: http://localhost:9001/api/v1/bookings/**
+        predicates[0]: Path=/api/v1/bookings/**
+        
+       routes[8]:        
+        id: bookingdetails
+        uri: http://localhost:9001/api/v1/bookings/{id}/**
+        predicates[0]: Path=/api/v1/bookings/{id}/**
+        
+       routes[9]:        
+        id: bookingdetails
+        uri: http://localhost:9001/api/v1/bookings/email/{emailID}/**
+        predicates[0]: Path=/api/v1/bookings/email/{emailID}/**
+        
+      routes[10]:        
+        id: bookingdetails
+        uri: http://localhost:9001/api/v1/bookings/owner/{ownerEmailId}/**
+        predicates[0]: Path=/api/v1/bookings/owner/{ownerEmailId}/**
+        
+      routes[11]:        
+        id: PlaceRegistration
+        uri: http://localhost:9007/api/v1/users/places/**
+        predicates[0]: Path=/api/v1/users/places/**
+        
+     
+            
+              
+          
+         
+         
+		
+		
+		
+		
+		
+		
+eureka:
+	instance:
+		prefer-ip-address:true
+	client:
+		fetch-registry:true
+		register-with-eureka:true
+		service-url:
+			defaultZone: http://localhost:8761/eureka
+ 		
