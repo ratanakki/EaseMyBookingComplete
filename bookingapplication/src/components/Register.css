@@ -1,0 +1,106 @@
+.register-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.register-container h1 {
+  text-align: center;
+}
+
+.register-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.register-container form div {
+  margin-bottom: 20px;
+}
+
+.register-container label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.register-container input,
+.register-container textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.register-container textarea {
+  height: 100px;
+}
+
+.register-container button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.register-container button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.dialog-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dialog {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.snackbar-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.snackbar {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.snackbar button {
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.snackbar button:hover {
+  text-decoration: underline;
+}
+
+.image-preview-container img {
+  max-width: 100%;
+  height: auto;
+  max-height: 150px;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}

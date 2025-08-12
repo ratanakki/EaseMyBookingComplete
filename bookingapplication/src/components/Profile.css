@@ -1,0 +1,116 @@
+/* Profile Container */
+.profile-container {
+  display: contents;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Stack items vertically */
+  padding: 1%; /* Assuming the container's width is much larger */
+  margin-top: 5%; /* Adjust this value as needed */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in-out; /* Fade-in animation */
+  box-sizing: border-box; /* Include padding in element's total width and height */
+}
+ 
+/* Card Styles */
+.card {
+  width: 100%; /* Allow card to adjust based on max-width */
+  max-width: 80%; /* Medium size for the card */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column; /* Ensure content is stacked vertically */
+  align-items: center;
+  padding: 1%; /* Adjust padding in percentage */
+  background-color: white;
+  border-radius: 2%; /* Keep border-radius in percentage */
+  box-sizing: border-box;
+  position: absolute; /* Fix the card position */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust for accurate centering */
+}
+ 
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  /* Removed scale transform on hover */
+}
+ 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(0); /* Move card up */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Move card to its original position */
+  }
+}
+ 
+/* Button Styles */
+.button {
+  background-color: #a7aca7;
+  border: none;
+  color: white;
+  padding: 2% 5%; /* Adjust padding in percentage */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1em; /* Keep font size in em for scalability */
+  margin: 1% 0.5%; /* Adjust margin in percentage */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+ 
+.button:hover {
+  background-color: #8b8f8b;
+  transform: scale(1.1);
+}
+ 
+/* Profile Image Style */
+.profile-image {
+  width: 30%; /* Adjust size as needed */
+  height: 30%; /* Adjust size as needed */
+  border-radius: 50%; /* Make the image round */
+  object-fit: cover; /* Ensure the image covers the entire container */
+  animation: pop 0.5s ease-in-out;
+}
+ 
+/* Profile Details Styles */
+.profile-details {
+  font-family: Arial, sans-serif;
+  color: #0c0101;
+  line-height: 1.6;
+}
+ 
+.profile-details p {
+  margin: 2% 0;
+  padding: 2%;
+  /* Removed the border-bottom */
+  animation: slideIn 0.5s ease-in-out;
+}
+ 
+.profile-details strong {
+  color: #070404;
+}
+ 
+/* Animations */
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+ 
+@keyframes pop {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

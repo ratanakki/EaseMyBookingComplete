@@ -1,0 +1,95 @@
+/* General Container Styles */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+/* Header Styles */
+.header {
+  display: flex;
+  align-items: center;
+  background-color: #f8f9fa;
+  padding: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  height: 40px;
+  margin-right: 16px;
+}
+
+.header h1 {
+  margin: 0;
+}
+
+/* Side Menu Styles */
+.side-menu {
+  width: 200px;
+  background-color: #343a40;
+  color: white;
+  padding-top: 20px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  overflow-y: auto;
+  
+}
+
+.side-menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.side-menu li {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.side-menu li a {
+  color: white;
+  text-decoration: none;
+}
+
+.side-menu li:hover, .side-menu li.active {
+  background-color: #495057;
+}
+
+.log-out {
+  background-color: #dc3545;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  margin: 20px auto;
+  cursor: pointer;
+  width: 80%;
+  transition: background-color 0.3s ease;
+}
+
+.log-out:hover {
+  background-color: #c82333;
+}
+
+/* Container Styles */
+.container {
+  margin-left: 220px;
+  padding: 20px;
+  flex-grow: 1;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #f8f9fa;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.footer-content {
+  margin: 0;
+}

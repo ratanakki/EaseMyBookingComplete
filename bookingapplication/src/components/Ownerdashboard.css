@@ -1,0 +1,45 @@
+/* OwnerDashboard.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  .app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .header, .footer {
+    background-color: #131415;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+  }
+  
+  .header h1, .footer p {
+    margin: 0;
+  }
+  
+  .content {
+    flex-grow: 1;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    color: #4f5663;
+  }
+
+  .toolbar-placeholder {
+    height: 235px; /* Adjust this to match the height of your toolbar */
+  }
+  
+  
